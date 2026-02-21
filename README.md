@@ -1,5 +1,7 @@
 📘 Project: Personal Budget Tracker (Beginner Level)
+
 🎯 What you’ll learn:
+
 Basic C# concepts
   Variables
   Lists
