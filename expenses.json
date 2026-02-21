@@ -1,0 +1,42 @@
+[
+  {
+    "Amount": 12,
+    "Category": "Food",
+    "Date": "2026-02-20T00:00:00"
+  },
+  {
+    "Amount": 250,
+    "Category": "Rent",
+    "Date": "2026-01-02T00:00:00"
+  },
+  {
+    "Amount": 250,
+    "Category": "Rent",
+    "Date": "2026-02-04T00:00:00"
+  },
+  {
+    "Amount": 24,
+    "Category": "Travel",
+    "Date": "2026-01-20T00:00:00"
+  },
+  {
+    "Amount": 68,
+    "Category": "Travel",
+    "Date": "2026-02-20T00:00:00"
+  },
+  {
+    "Amount": 15.888,
+    "Category": "Utility",
+    "Date": "2026-01-07T00:00:00"
+  },
+  {
+    "Amount": 23.488,
+    "Category": "Utility",
+    "Date": "2026-02-20T00:00:00"
+  },
+  {
+    "Amount": 10,
+    "Category": "Food",
+    "Date": "2026-01-20T00:00:00"
+  }
+]

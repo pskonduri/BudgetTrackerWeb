@@ -1,0 +1,26 @@
+﻿@page "{id:int}"
+@model EditExpenseModel
+
+<h2>Edit Expense</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label>Amount</label>
+        <input asp-for="Amount" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Category</label>
+        <input asp-for="Category" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Date</label>
+        <input asp-for="Date" type="date" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+</form>
+

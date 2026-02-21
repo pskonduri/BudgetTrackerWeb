@@ -1,0 +1,24 @@
+﻿@page
+@model AddExpenseModel
+
+<h2>Add Expense</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label>Amount</label>
+        <input asp-for="Amount" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Category</label>
+        <input asp-for="Category" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Date</label>
+        <input asp-for="Date" type="date" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Add Expense</button>
+</form>
+

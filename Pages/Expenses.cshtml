@@ -1,0 +1,29 @@
+﻿@page
+@model ExpensesModel
+
+<h2>All Expenses</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+    @for (int i = 0; i < Model.Expenses.Count; i++)
+    {
+        var e = Model.Expenses[i];
+        <tr>
+                <td>@e.Amount</td>
+                <td>@e.Category</td>
+                <td>@e.Date.ToShortDateString()</td>
+                <td>
+                <a asp-page="/EditExpense" asp-route-id="@i">Edit</a>
+                <a asp-page="/DeleteExpense" asp-route-id="@i">Delete</a>
+                </td>
+                </tr>
+    }
+    </tbody>
+</table>
