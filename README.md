@@ -24,3 +24,14 @@ JSON serialization/deserialization
 Encapsulates business logic in separate classes
 A simple web app using ASP.NET using Razor Pages
 
+Several new web development concepts:
+✔ GET-based forms
+Perfect for filters, searches, and reports.
+✔ Query parameters
+?month=2&year=2025 is now part of your app.
+✔ Conditional UI rendering
+Different UI depending on whether results exist.
+✔ Reusing your business logic
+BudgetManager.GetMonthlyExpenses() powers the whole page.
+This is exactly how real dashboards work.
+
