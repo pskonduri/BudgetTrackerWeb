@@ -1,0 +1,38 @@
+﻿@page
+@model CategoryReportModel
+
+<h2>Category Report</h2>
+
+@if (Model.Report.Count == 0)
+{
+    <p>No expenses recorded.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Total Spent</th>
+                <th>Number of Expenses</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.Report)
+        {
+            <tr>
+                <td>@item.Category</td>
+                <td>$@item.Total</td>
+                <td>@item.Count</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    <h4>Top Category</h4>
+    <p>
+        <strong>@Model.Report.First().Category</strong>  
+        — $@Model.Report.First().Total
+    </p>
+}
+

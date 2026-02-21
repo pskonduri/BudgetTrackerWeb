@@ -1,0 +1,58 @@
+﻿@page
+@model MonthlySummaryModel
+
+<h2>Monthly Summary</h2>
+
+<form method="get" class="row g-3 mb-4">
+    <div class="col-auto">
+        <label>Month</label>
+        <select asp-for="Month" class="form-select">
+            <option value="">-- Select Month --</option>
+            @for (int m = 1; m <= 12; m++)
+            {
+                <option value="@m">@m</option>
+            }
+        </select>
+    </div>
+
+    <div class="col-auto">
+        <label>Year</label>
+        <input asp-for="Year" class="form-control" placeholder="2025" />
+    </div>
+
+    <div class="col-auto align-self-end">
+        <button type="submit" class="btn btn-primary">View Summary</button>
+    </div>
+</form>
+
+@if (Model.MonthlyExpenses.Count > 0)
+{
+    <h4>Expenses for @Model.Month/@Model.Year</h4>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var e in Model.MonthlyExpenses)
+        {
+            <tr>
+                <td>$@e.Amount</td>
+                <td>@e.Category</td>
+                <td>@e.Date.ToShortDateString()</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    <h4>Total: $@Model.Total</h4>
+}
+else if (Model.Month > 0 && Model.Year > 0)
+{
+    <p>No expenses found for this month.</p>
+}
+
